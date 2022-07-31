@@ -62,7 +62,7 @@ def filtrar_farmacias(dia, ciudad):
 
 
 def buscar_farmacias(fila):
-    with open('./data/Farmacias.csv', 'r', encoding='utf-8') as csvfile:
+    with open('./data/farmacias.csv', 'r', encoding='utf-8') as csvfile:
         lista = list(filter(lambda elem: elem['PK'] == fila,
                             csv.DictReader(csvfile, delimiter=',')))
     return lista[0]
