@@ -52,7 +52,7 @@ def es_dia(diccionario, dia):
 
 
 def filtrar_farmacias(dia, ciudad):
-    with open('./data/Farmacias.csv', 'r', encoding='utf-8') as csvfile:
+    with open('./data/farmacias.csv', 'r', encoding='utf-8') as csvfile:
         lista = list(filter(lambda elem: es_ciudad(elem, ciudad) and es_dia(elem, dia),
                             csv.DictReader(csvfile, delimiter=',')))
     return lista
