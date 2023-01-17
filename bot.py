@@ -194,7 +194,8 @@ def error(update, context):
 def main():
     # Create the Updater and pass it your bot's token.
     telegram_token = os.environ.get("TOKEN")
-    updater = Updater(telegram_token, use_context=True)
+    #updater = Updater(telegram_token, use_context=True)
+    updater = Updater(telegram_token)
 
     # Get the dispatcher to register handlers
     dp = updater.dispatcher
